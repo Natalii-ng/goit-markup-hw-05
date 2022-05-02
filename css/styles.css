@@ -315,14 +315,7 @@ header::after {
 .work-img {
   position: relative;
 }
-.work-img::before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  min-height: 70px;
-  bottom: 0;
-  background: rgba(47, 48, 58, 0.8);
-}
+
 .work-list p {
   position: absolute;
   width: 100%;
@@ -332,6 +325,7 @@ header::after {
   text-align: center;
   line-height: 1.14;
   padding: 27px 0;
+  background: rgba(47, 48, 58, 0.8);
 
   color: var(--primary-white-color);
 
@@ -595,9 +589,11 @@ footer .container {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 .modal {
@@ -629,18 +625,7 @@ footer .container {
   position: relative;
   overflow: hidden;
 }
-.project-img::before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(33, 150, 243, 0.9);
 
-  transform: translatey(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .project-text {
   position: absolute;
   width: 100%;
@@ -650,12 +635,12 @@ footer .container {
   line-height: 1.56;
   color: var(--primary-white-color);
   padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
   transform: translatey(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.project-card:hover .project-img::before,
+
 .project-card:hover .project-text,
-.project-card:focus .project-img::before,
 .project-card:focus .project-text {
   transform: translatey(0);
 }
