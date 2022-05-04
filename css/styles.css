@@ -236,6 +236,7 @@ header::after {
   padding: 11px 34px;
   min-width: 200px;
   border: none;
+  cursor: pointer;
 
   color: var(--primary-white-color);
   background-color: var(--accent-color);
